@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 
 namespace Calculator
 {
-    class Calculation<T>
+    public class Calculation<T>
     {
         public T Multiply<T>(T a, T b)
         {

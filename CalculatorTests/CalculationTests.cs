@@ -1,18 +1,49 @@
 ﻿using NUnit.Framework;
-using Calculator;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Calculator.Tests
 {
-    [TestFixture()]
+    [TestFixture]
     public class CalculationTests
     {
-        [Test()]
-        public void ATest()
+
+        [Test]
+        public void IntSumOf20and10()
         {
-            Assert.Fail();
+            // Setup
+            Calculation<int> calculation = new Calculator.Calculation<int>();
+
+            //Assert
+            Assert.AreEqual(30, calculation.Sum(10, 20));
+        }
+
+        [Test]
+        public void IntMultiplyOf20and10()
+        {
+            // Setup
+            Calculation<int> calculation = new Calculator.Calculation<int>();
+
+            //Assert
+            Assert.AreEqual(200, calculation.Multiply(10, 20));
+        }
+
+        [Test]
+        public void FloatDivideOf20and10()
+        {
+            // Setup
+            Calculation<float> calculation = new Calculator.Calculation<float>();
+
+            //Assert
+            Assert.AreEqual(0.5f, calculation.Divide(10f, 20f));
+        }
+
+        [Test]
+        public void DecimalSubtractOf20and10()
+        {
+            // Setup
+            Calculation<float> calculation = new Calculator.Calculation<float>();
+
+            //Assert
+            Assert.AreEqual(-10.0, calculation.Subtract(10.0, 20.0));
         }
     }
 }
