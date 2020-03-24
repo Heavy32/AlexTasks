@@ -5,15 +5,16 @@ namespace Calculator.Tests
     [TestFixture]
     public class CalculationTests
     {
-
         [Test]
         public void IntSumOf20and10()
         {
             // Setup
-            Calculation<int> calculation = new Calculator.Calculation<int>();
+            Math<int> math = new Math<int>();
+            //Calculation<int> calculation = new Calculator.Calculation<int>();
 
             //Assert
-            Assert.AreEqual(30, calculation.Sum(10, 20));
+            Assert.AreEqual(40, math.Sum(20, 20));
+            //Assert.AreEqual(30, calculation.Sum(10, 20));
         }
 
         [Test]
