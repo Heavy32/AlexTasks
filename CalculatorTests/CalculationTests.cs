@@ -10,41 +10,39 @@ namespace Calculator.Tests
         {
             // Setup
             Math<int> math = new Math<int>();
-            //Calculation<int> calculation = new Calculator.Calculation<int>();
 
             //Assert
-            Assert.AreEqual(40, math.Sum(20, 20));
-            //Assert.AreEqual(30, calculation.Sum(10, 20));
+            Assert.AreEqual(30, math.Sum(20, 10));
         }
 
         [Test]
         public void IntMultiplyOf20and10()
         {
             // Setup
-            Calculation<int> calculation = new Calculator.Calculation<int>();
+            Math<int> math = new Math<int>();
 
             //Assert
-            Assert.AreEqual(200, calculation.Multiply(10, 20));
+            Assert.AreEqual(200, math.Multiply(20, 10));
         }
 
         [Test]
         public void FloatDivideOf20and10()
         {
             // Setup
-            Calculation<float> calculation = new Calculator.Calculation<float>();
+            Math<int> math = new Math<int>();
 
             //Assert
-            Assert.AreEqual(0.5f, calculation.Divide(10f, 20f));
+            Assert.AreEqual(2, math.Divide(20, 10));
         }
 
         [Test]
         public void DecimalSubtractOf20and10()
         {
             // Setup
-            Calculation<float> calculation = new Calculator.Calculation<float>();
+            Math<decimal> math = new Math<decimal>();
 
             //Assert
-            Assert.AreEqual(-10.0, calculation.Subtract(10.0, 20.0));
+            Assert.AreEqual(10, math.Subtract(20, 10));
         }
     }
 }
