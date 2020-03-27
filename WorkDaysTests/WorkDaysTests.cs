@@ -6,41 +6,39 @@ namespace WorkDays.Tests
     [TestFixture()]
     public class WorkDaysCounterTests
     {
-        [Test()]
-        public void Test1()
+        [Test]
+        public void Start2March10workDays()
         {
-            DateTime start = new DateTime(2020, 2, 3);
-
             WorkDays workDays = new WorkDays();
-            int expected = 5;
-            int actual = workDays.WorkDaysCounter(start, 5, 0);
-
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(12, workDays.DaysCounter(new DateTime(2020, 03, 2), 10));
         }
 
-        [Test()]
-        public void Test2()
+        [Test]
+        public void Start2March11workDays()
         {
-            DateTime start = new DateTime(2020, 2, 3);
-
             WorkDays workDays = new WorkDays();
-            int expected = 12;
-            int actual = workDays.WorkDaysCounter(start, 10, 0);
-
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(15, workDays.DaysCounter(new DateTime(2020, 03, 2), 11));
         }
 
-        [Test()]
-        public void Test3()
+        [Test]
+        public void Start2March15workDays()
         {
-            DateTime start = new DateTime(2020, 2, 7);
-
             WorkDays workDays = new WorkDays();
-            int expected = 4;
-            int actual = workDays.WorkDaysCounter(start, 2, 0);
-
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(19, workDays.DaysCounter(new DateTime(2020, 03, 2), 15));
         }
 
+        [Test]
+        public void Start3March1workDays()
+        {
+            WorkDays workDays = new WorkDays();
+            Assert.AreEqual(2, workDays.DaysCounter(new DateTime(2020, 03, 3), 1));
+        }
+
+        [Test]
+        public void Start3March15workDays()
+        {
+            WorkDays workDays = new WorkDays();
+            Assert.AreEqual(21, workDays.DaysCounter(new DateTime(2020, 03, 3), 15));
+        }
     }
 }

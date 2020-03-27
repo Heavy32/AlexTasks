@@ -5,12 +5,15 @@ namespace WorkDays
 {
     public class WorkDays
     {
-        public int WorkDaysCounter(DateTime current, int workDays, int i)
+        /// <summary>
+        /// Дана дата начала задачи DateTime и количество рабочих дней int для ее выполнения.
+        /// Вывести количество календарных дней, которое потребуется для её выполнения.
+        /// </summary>
+        public int DaysCounter(DateTime current, int workDays)
         {
-            if ((current.DayOfWeek != DayOfWeek.Saturday) && (current.DayOfWeek != DayOfWeek.Sunday))
-                workDays--;
-
-            return (workDays == 0) ? ++i : WorkDaysCounter(current.AddDays(1), workDays, ++i);
+            int dayNumberOfWeek = (int)current.DayOfWeek;
+            int fullWeeksPassed = ((workDays - 1) / 5);
+            return (7 - dayNumberOfWeek + 1) + ((fullWeeksPassed - 1) * 7) + (workDays - fullWeeksPassed * 5);
         }
     }
 }
