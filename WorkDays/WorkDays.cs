@@ -13,7 +13,7 @@ namespace WorkDays
         {
             int dayNumberOfWeek = (int)current.DayOfWeek;
             int fullWeeksPassed = ((workDays - 1) / 5);
-            return (7 - dayNumberOfWeek + 1) + ((fullWeeksPassed - 1) * 7) + (workDays - fullWeeksPassed * 5);
+            return (7 - dayNumberOfWeek + 1) + (fullWeeksPassed * 7) + (workDays - ((fullWeeksPassed * 5) + (7 - dayNumberOfWeek - 1)));
         }
     }
 }
