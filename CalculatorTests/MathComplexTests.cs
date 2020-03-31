@@ -13,6 +13,7 @@ namespace Calculator.Tests
         public void SumTest()
         {
             MathComplex mathComplex = new MathComplex();
+
             Assert.AreEqual(mathComplex.Sum(new ComplexNumber(1, 3), new ComplexNumber(2, 1)), new ComplexNumber(3, 3));
         }
 
