@@ -31,7 +31,7 @@ namespace WorkDays.Tests
         public void Start3March1workDays()
         {
             WorkDays workDays = new WorkDays();
-            Assert.AreEqual(2, workDays.DaysCounter(new DateTime(2020, 03, 3), 1));
+            Assert.AreEqual(1, workDays.DaysCounter(new DateTime(2020, 03, 3), 1));
         }
 
         [Test]
@@ -46,6 +46,13 @@ namespace WorkDays.Tests
         {
             WorkDays workDays = new WorkDays();
             Assert.AreEqual(14, workDays.DaysCounter(new DateTime(2020, 03, 3), 10));
+        }
+
+        [Test]
+        public void Start6March1workDays()
+        {
+            WorkDays workDays = new WorkDays();
+            Assert.AreEqual(1, workDays.DaysCounter(new DateTime(2020, 03, 6), 1));
         }
     }
 }
