@@ -11,7 +11,6 @@ namespace WorkDays
         /// </summary>
         public int DaysCounter(DateTime current, int workDays)
         {
-            int total = 0;
             int firstWeekWorkDays;
 
             if(workDays < 5)
@@ -19,8 +18,7 @@ namespace WorkDays
                 if((int)current.DayOfWeek + workDays - 1 > 5)
                 {
                     firstWeekWorkDays = (5 - (int)current.DayOfWeek + 1);
-                    total = firstWeekWorkDays + 2 + (workDays - firstWeekWorkDays);
-                    return total;
+                    return firstWeekWorkDays + 2 + (workDays - firstWeekWorkDays);
                 }
                 else
                 {
@@ -29,12 +27,13 @@ namespace WorkDays
                 
             }
 
+            int total;
             firstWeekWorkDays = (5 - (int)current.DayOfWeek + 1);
-            workDays = workDays - firstWeekWorkDays;
-            total = (5 - (int)current.DayOfWeek + 1) + 2;
+            workDays -= firstWeekWorkDays;
+            total = firstWeekWorkDays + 2;
             int fullWorkWeeksPassed = (workDays - 1) / 5;
             total += (fullWorkWeeksPassed * 7);
-            workDays = workDays - (fullWorkWeeksPassed * 5);
+            workDays -= (fullWorkWeeksPassed * 5);
             total += workDays;
 
             return total;
