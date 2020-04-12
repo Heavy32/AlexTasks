@@ -14,11 +14,6 @@ namespace Calculator
 
         public T Sum(T a, T b)
         {
-            //if(a is ComplexNumber)
-            //{
-            //    MathComplex<ComplexNumber> mathComplex = new MathComplex<ComplexNumber>();
-            //    return mathComplex.Sum(a as ComplexNumber, b as ComplexNumber);
-            //}
             Operation.Calculation calculation = Expression.Add;
             return operation.Act<T>(a, b, calculation);
         }

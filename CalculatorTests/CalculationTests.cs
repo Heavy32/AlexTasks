@@ -6,6 +6,46 @@ namespace Calculator.Tests
     public class CalculationTests
     {
         [Test]
+        public void ComplexSum1()
+        {
+            // Setup
+            Math<ComplexNumber> math = new Math<ComplexNumber>();
+
+            //Assert
+            Assert.AreEqual(new ComplexNumber(3, 3), math.Sum(new ComplexNumber(1, 3), new ComplexNumber(2, 1)));
+        }
+
+        [Test]
+        public void ComplexDivide()
+        {
+            // Setup
+            Math<ComplexNumber> math = new Math<ComplexNumber>();
+
+            //Assert
+            Assert.AreEqual(new ComplexNumber(1, 1), math.Divide(new ComplexNumber(1, 3), new ComplexNumber(2, 1)));
+        }
+
+        [Test]
+        public void ComplexMultiply()
+        {
+            // Setup
+            Math<ComplexNumber> math = new Math<ComplexNumber>();
+
+            //Assert
+            Assert.AreEqual(new ComplexNumber(-1, 7), math.Multiply(new ComplexNumber(1, 3), new ComplexNumber(2, 1)));
+        }
+
+        [Test]
+        public void ComplexSubstract()
+        {
+            // Setup
+            Math<ComplexNumber> math = new Math<ComplexNumber>();
+
+            //Assert
+            Assert.AreEqual(new ComplexNumber(-1, 2), math.Multiply(new ComplexNumber(1, 3), new ComplexNumber(2, 1)));
+        }
+
+        [Test]
         public void IntSumOf20and10()
         {
             // Setup
