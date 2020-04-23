@@ -3,7 +3,7 @@ using System;
 
 namespace WorkDays.Tests
 {
-    [TestFixture()]
+    [TestFixture]
     public class WorkDaysCounterTests
     {
         [Test]
