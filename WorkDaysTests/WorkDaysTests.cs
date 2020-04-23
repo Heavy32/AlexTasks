@@ -7,6 +7,90 @@ namespace WorkDays.Tests
     public class WorkDaysCounterTests
     {
         [Test]
+        public void Start20April1workDays()
+        {
+            WorkDays workDays = new WorkDays();
+            Assert.AreEqual(1, workDays.DaysCounter(new DateTime(2020, 04, 20), 1));
+        }
+
+        [Test]
+        public void Start20April2workDays()
+        {
+            WorkDays workDays = new WorkDays();
+            Assert.AreEqual(2, workDays.DaysCounter(new DateTime(2020, 04, 20), 2));
+        }
+
+        [Test]
+        public void Start20April3workDays()
+        {
+            WorkDays workDays = new WorkDays();
+            Assert.AreEqual(3, workDays.DaysCounter(new DateTime(2020, 04, 20), 3));
+        }
+
+        [Test]
+        public void Start20April4workDays()
+        {
+            WorkDays workDays = new WorkDays();
+            Assert.AreEqual(4, workDays.DaysCounter(new DateTime(2020, 04, 20), 4));
+        }
+
+        [Test]
+        public void Start20April5workDays()
+        {
+            WorkDays workDays = new WorkDays();
+            Assert.AreEqual(5, workDays.DaysCounter(new DateTime(2020, 04, 20), 5));
+        }
+
+        [Test]
+        public void Start20April6workDays()
+        {
+            WorkDays workDays = new WorkDays();
+            Assert.AreEqual(8, workDays.DaysCounter(new DateTime(2020, 04, 20), 6));
+        }
+
+        [Test]
+        public void Start21April5workDays()
+        {
+            WorkDays workDays = new WorkDays();
+            Assert.AreEqual(7, workDays.DaysCounter(new DateTime(2020, 04, 21), 5));
+        }
+
+        [Test]
+        public void Start20April7workDays()
+        {
+            WorkDays workDays = new WorkDays();
+            Assert.AreEqual(9, workDays.DaysCounter(new DateTime(2020, 04, 20), 7));
+        }
+
+        [Test]
+        public void Start20April11workDays()
+        {
+            WorkDays workDays = new WorkDays();
+            Assert.AreEqual(15, workDays.DaysCounter(new DateTime(2020, 04, 20), 11));
+        }
+
+        [Test]
+        public void Start23April2workDays()
+        {
+            WorkDays workDays = new WorkDays();
+            Assert.AreEqual(2, workDays.DaysCounter(new DateTime(2020, 04, 23), 2));
+        }
+
+        [Test]
+        public void Start21April4workDays()
+        {
+            WorkDays workDays = new WorkDays();
+            Assert.AreEqual(4, workDays.DaysCounter(new DateTime(2020, 04, 21), 4));
+        }
+
+        [Test]
+        public void Start20April10workDays()
+        {
+            WorkDays workDays = new WorkDays();
+            Assert.AreEqual(12, workDays.DaysCounter(new DateTime(2020, 04, 20), 10));
+        }
+
+        [Test]
         public void Start27April1workDays()
         {
             WorkDays workDays = new WorkDays();
