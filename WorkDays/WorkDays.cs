@@ -13,7 +13,7 @@ namespace WorkDays
         {
             int firstWeekWorkDays;
 
-            if(workDays < 5)
+            if(workDays <= 5)
             {
                 if((int)current.DayOfWeek + workDays - 1 > 5)
                 {
@@ -23,8 +23,7 @@ namespace WorkDays
                 else
                 {
                     return workDays;
-                }
-                
+                }               
             }
 
             int total;
