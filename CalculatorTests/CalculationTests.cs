@@ -8,7 +8,7 @@ namespace Calculator.Tests
         [Test]
         public void ComplexSum1()
         {
-            // Setup
+            // Arrange
             Math<ComplexNumber> math = new Math<ComplexNumber>();
 
             //Assert
@@ -18,7 +18,7 @@ namespace Calculator.Tests
         [Test]
         public void ComplexDivide()
         {
-            // Setup
+            // Arrange
             Math<ComplexNumber> math = new Math<ComplexNumber>();
 
             //Assert
@@ -28,7 +28,7 @@ namespace Calculator.Tests
         [Test]
         public void ComplexMultiply()
         {
-            // Setup
+            // Arrange
             Math<ComplexNumber> math = new Math<ComplexNumber>();
 
             //Assert
@@ -38,7 +38,7 @@ namespace Calculator.Tests
         [Test]
         public void ComplexSubstract()
         {
-            // Setup
+            // Arrange
             Math<ComplexNumber> math = new Math<ComplexNumber>();
 
             //Assert
@@ -48,7 +48,7 @@ namespace Calculator.Tests
         [Test]
         public void IntSumOf20and10()
         {
-            // Setup
+            // Arrange
             Math<int> math = new Math<int>();
 
             //Assert
@@ -58,7 +58,7 @@ namespace Calculator.Tests
         [Test]
         public void IntMultiplyOf20and10()
         {
-            // Setup
+            // Arrange
             Math<int> math = new Math<int>();
 
             //Assert
@@ -68,7 +68,7 @@ namespace Calculator.Tests
         [Test]
         public void FloatDivideOf20and10()
         {
-            // Setup
+            // Arrange
             Math<int> math = new Math<int>();
 
             //Assert
@@ -78,7 +78,7 @@ namespace Calculator.Tests
         [Test]
         public void DecimalSubtractOf20and10()
         {
-            // Setup
+            // Arrange
             Math<decimal> math = new Math<decimal>();
 
             //Assert
