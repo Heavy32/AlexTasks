@@ -10,32 +10,10 @@ namespace WorkDays
         /// Вывести количество календарных дней, которое потребуется для её выполнения.
         /// </summary>
         public int DaysCounter(DateTime current, int workDays)
-        {
-            int firstWeekWorkDays;
+            => (workDays <= 5) ? (((int)current.DayOfWeek + workDays - 1 > 5) ? (5 - (int)current.DayOfWeek + 1) + 2 + (workDays - (5 - (int)current.DayOfWeek + 1)) : workDays)
+                               : (workDays - (5 - (int)current.DayOfWeek + 1) - ((workDays - (5 - (int)current.DayOfWeek + 1) - 1) / 5 * 5)
+                                      + ((workDays - (5 - (int)current.DayOfWeek + 1) - 1) / 5 * 7))
+                                      + (5 - (int)current.DayOfWeek + 1) + 2;
 
-            if(workDays <= 5)
-            {
-                if((int)current.DayOfWeek + workDays - 1 > 5)
-                {
-                    firstWeekWorkDays = (5 - (int)current.DayOfWeek + 1);
-                    return firstWeekWorkDays + 2 + (workDays - firstWeekWorkDays);
-                }
-                else
-                {
-                    return workDays;
-                }               
-            }
-
-            int total;
-            firstWeekWorkDays = (5 - (int)current.DayOfWeek + 1);
-            workDays -= firstWeekWorkDays;
-            total = firstWeekWorkDays + 2;
-            int fullWorkWeeksPassed = (workDays - 1) / 5;
-            total += (fullWorkWeeksPassed * 7);
-            workDays -= (fullWorkWeeksPassed * 5);
-            total += workDays;
-
-            return total;
-        }
     }
 }
