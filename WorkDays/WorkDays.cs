@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace WorkDays
 {
@@ -11,9 +10,12 @@ namespace WorkDays
         /// </summary>
         public int DaysCounter(DateTime current, int workDays)
         {
-            int dayNumberOfWeek = (int)current.DayOfWeek;
-            int fullWeeksPassed = ((workDays - 1) / 5);
-            return (7 - dayNumberOfWeek + 1) + ((fullWeeksPassed - 1) * 7) + (workDays - (((fullWeeksPassed - 1) * 5) + (7 - dayNumberOfWeek - 1)));
+            int currentDayOfWeek = (int)current.DayOfWeek;
+            return (workDays <= 5) ? ((currentDayOfWeek + workDays - 1 > 5) ? (5 - currentDayOfWeek + 1) + 2 + (workDays - (5 - currentDayOfWeek + 1)) : workDays)
+                               : (workDays - (5 - currentDayOfWeek + 1) - ((workDays - (5 - currentDayOfWeek + 1) - 1) / 5 * 5)
+                                      + ((workDays - (5 - currentDayOfWeek + 1) - 1) / 5 * 7))
+                                      + (5 - currentDayOfWeek + 1) + 2;
         }
+
     }
 }
