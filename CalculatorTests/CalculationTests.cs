@@ -6,9 +6,49 @@ namespace Calculator.Tests
     public class CalculationTests
     {
         [Test]
+        public void ComplexSum1()
+        {
+            // Arrange
+            Math<ComplexNumber> math = new Math<ComplexNumber>();
+
+            //Assert
+            Assert.AreEqual(new ComplexNumber(3, 3), math.Sum(new ComplexNumber(1, 3), new ComplexNumber(2, 1)));
+        }
+
+        [Test]
+        public void ComplexDivide()
+        {
+            // Arrange
+            Math<ComplexNumber> math = new Math<ComplexNumber>();
+
+            //Assert
+            Assert.AreEqual(new ComplexNumber(1, 1), math.Divide(new ComplexNumber(1, 3), new ComplexNumber(2, 1)));
+        }
+
+        [Test]
+        public void ComplexMultiply()
+        {
+            // Arrange
+            Math<ComplexNumber> math = new Math<ComplexNumber>();
+
+            //Assert
+            Assert.AreEqual(new ComplexNumber(-1, 7), math.Multiply(new ComplexNumber(1, 3), new ComplexNumber(2, 1)));
+        }
+
+        [Test]
+        public void ComplexSubstract()
+        {
+            // Arrange
+            Math<ComplexNumber> math = new Math<ComplexNumber>();
+
+            //Assert
+            Assert.AreEqual(new ComplexNumber(-1, 2), math.Multiply(new ComplexNumber(1, 3), new ComplexNumber(2, 1)));
+        }
+
+        [Test]
         public void IntSumOf20and10()
         {
-            // Setup
+            // Arrange
             Math<int> math = new Math<int>();
 
             //Assert
@@ -18,7 +58,7 @@ namespace Calculator.Tests
         [Test]
         public void IntMultiplyOf20and10()
         {
-            // Setup
+            // Arrange
             Math<int> math = new Math<int>();
 
             //Assert
@@ -28,7 +68,7 @@ namespace Calculator.Tests
         [Test]
         public void FloatDivideOf20and10()
         {
-            // Setup
+            // Arrange
             Math<int> math = new Math<int>();
 
             //Assert
@@ -38,7 +78,7 @@ namespace Calculator.Tests
         [Test]
         public void DecimalSubtractOf20and10()
         {
-            // Setup
+            // Arrange
             Math<decimal> math = new Math<decimal>();
 
             //Assert
