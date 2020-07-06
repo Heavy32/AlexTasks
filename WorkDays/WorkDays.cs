@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace WorkDays
 {
@@ -10,10 +9,13 @@ namespace WorkDays
         /// Вывести количество календарных дней, которое потребуется для её выполнения.
         /// </summary>
         public int DaysCounter(DateTime current, int workDays)
-            => (workDays <= 5) ? (((int)current.DayOfWeek + workDays - 1 > 5) ? (5 - (int)current.DayOfWeek + 1) + 2 + (workDays - (5 - (int)current.DayOfWeek + 1)) : workDays)
-                               : (workDays - (5 - (int)current.DayOfWeek + 1) - ((workDays - (5 - (int)current.DayOfWeek + 1) - 1) / 5 * 5)
-                                      + ((workDays - (5 - (int)current.DayOfWeek + 1) - 1) / 5 * 7))
-                                      + (5 - (int)current.DayOfWeek + 1) + 2;
+        {
+            int currentDayOfWeek = (int)current.DayOfWeek;
+            return (workDays <= 5) ? ((currentDayOfWeek + workDays - 1 > 5) ? (5 - currentDayOfWeek + 1) + 2 + (workDays - (5 - currentDayOfWeek + 1)) : workDays)
+                               : (workDays - (5 - currentDayOfWeek + 1) - ((workDays - (5 - currentDayOfWeek + 1) - 1) / 5 * 5)
+                                      + ((workDays - (5 - currentDayOfWeek + 1) - 1) / 5 * 7))
+                                      + (5 - currentDayOfWeek + 1) + 2;
+        }
 
     }
 }
